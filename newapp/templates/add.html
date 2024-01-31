@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container1">
+        <h1>Add Member</h1>
+        <form action="{% url 'addrecord' %}" method="post">
+            {% csrf_token %}
+            <label>Fullname</label><br><br>
+            <input type="text" name="fname"><br><br>
+            <label>Section</label><br><br>
+            <input type="text" name="sec"><br><br>
+            <label>Year</label><br><br>
+            <input type="text" name="yr"><br><br>
+            <button type="submit" id="new">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
